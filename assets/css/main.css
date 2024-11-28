@@ -594,6 +594,15 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+.hidden {
+  display: none;
+}
+
+.toggle-icon {
+  cursor: pointer;
+  margin-right: 5px;
+}
+
 .about .content h2 {
   font-weight: 700;
   font-size: 24px;
