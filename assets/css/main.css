@@ -202,6 +202,12 @@ h6 {
   background-color: color-mix(in srgb, var(--accent-color) 90%, white 15%);
 }
 
+.download-cv {
+  color: var(--contrast-color);
+  /* background: var(--accent-color); */
+}
+
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
