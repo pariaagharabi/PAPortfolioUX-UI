@@ -202,9 +202,18 @@ h6 {
   background-color: color-mix(in srgb, var(--accent-color) 90%, white 15%);
 }
 
-.download-cv {
+.download-cv button {
   color: var(--contrast-color);
-  /* background: var(--accent-color); */
+  background: var(--accent-color);
+  border: 0;
+  margin-top: 15px;
+  padding: 10px 30px;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.download-cv button:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 25%);
 }
 
 
@@ -570,22 +579,6 @@ section,
   border-bottom: 2px solid var(--accent-color);
 }
 
-.hero .social-links {
-  margin-top: 25px;
-}
-
-.hero .social-links a {
-  font-size: 20px;
-  display: inline-block;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  line-height: 1;
-  margin-right: 20px;
-  transition: 0.3s;
-}
-
-.hero .social-links a:hover {
-  color: var(--accent-color);
-}
 
 @media (max-width: 768px) {
   .hero h2 {
