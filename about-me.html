@@ -44,14 +44,15 @@
 
         <i class="header-toggle d-xl-none bi bi-list"></i>
 
+        <a href="#hero">
+            <img src="assets/img/favicon.png" style="width: 55px; height: 55px; margin-bottom: 90px;">
+        </a>
+
         <nav id="navmenu" class="navmenu">
-            <div>
-                <img src="assets/img/favicon.png" style="width: 55px; height: 55px; margin-bottom: 90px;">
-            </div>
             <ul>
                 <li><a href="#hero" class="active"><i class="bi bi-house-fill"></i><span>Home</span></a></li>
                 <li><a href="#portfolio"><i class="bi bi-pin-angle-fill"></i><span>Works</span></a></li>
-                <li><a href="#about"><i class="bi bi-person-vcard"></i><span>About</span></a></li>
+                <li><a href="about-me.html" target="_blank"><i class="bi bi-person-vcard"></i><span>About</span></a></li>
                 <li><a href="#contact"><i class="bi bi-envelope-fill"></i><span>Contact</span></a></li>
             </ul>
         </nav>
@@ -120,12 +121,12 @@
 
                                     <!-- Background item -->
                                     <li>
-                                        <span class="toggle-icon" onclick="toggleText('bgText')">
+                                        <span class="toggle-icon" onclick="toggleText('bgText-1')">
                                             <i class="bi bi-chevron-right"></i>
                                         </span>
                                         <strong>Background:</strong>
                                     </li>
-                                    <div id="bgText" class="hidden">
+                                    <div id="bgText-1" class="hidden">
                                         <p>
                                             I have been fascinated by how technology shapes our interactions and
                                             experiences. This curiosity guided me through my studies in Computer
@@ -142,12 +143,12 @@
 
                                     <!-- Design Philosophy item -->
                                     <li>
-                                        <span class="toggle-icon" onclick="toggleText('bgText')">
+                                        <span class="toggle-icon" onclick="toggleText('bgText-2')">
                                             <i class="bi bi-chevron-right"></i>
                                         </span>
                                         <strong>Design Philosophy:</strong>
                                     </li>
-                                    <div id="bgText" class="hidden">
+                                    <div id="bgText-2" class="hidden">
                                         <p>
                                             My diverse background has shaped my design philosophy to prioritize
                                             user-centered design and
@@ -161,12 +162,12 @@
 
                                     <!-- The Little Things Matter item -->
                                     <li>
-                                        <span class="toggle-icon" onclick="toggleText('bgText')">
+                                        <span class="toggle-icon" onclick="toggleText('bgText-3')">
                                             <i class="bi bi-chevron-right"></i>
                                         </span>
                                         <strong>The Little Things Matter:</strong>
                                     </li>
-                                    <div id="bgText" class="hidden">
+                                    <div id="bgText-3" class="hidden">
                                         <p>
                                             What I love about design is the impact that small details can have on the
                                             overall user experience.
@@ -181,12 +182,12 @@
 
                                     <!-- The Empathy-Driven Design item -->
                                     <li>
-                                        <span class="toggle-icon" onclick="toggleText('bgText')">
+                                        <span class="toggle-icon" onclick="toggleText('bgText-4')">
                                             <i class="bi bi-chevron-right"></i>
                                         </span>
                                         <strong>Empathy-Driven Design:</strong>
                                     </li>
-                                    <div id="bgText" class="hidden">
+                                    <div id="bgText-4" class="hidden">
                                         <p>
                                             At the heart of my design approach is a deep sense of empathy for the user.
                                             I believe that
@@ -271,11 +272,13 @@
     <script>
         function toggleText(id) {
             const textElement = document.getElementById(id);
-            if (textElement.classList.contains('hidden')) {
-                textElement.classList.remove('hidden');
-            } else {
-                textElement.classList.add('hidden');
-            }
+            textElement.classList.toggle('hidden')
+
+            // if (textElement.classList.contains('hidden')) {
+            //     textElement.classList.remove('hidden');
+            // } else {
+            //     textElement.classList.add('hidden');
+            // }
         }
     </script>
 
