@@ -517,18 +517,20 @@ section,
 
 .hero h2 {
   margin: 0;
-  font-size: 64px;
+  font-size: 78px;
   font-weight: 700;
 }
 
 .hero p {
   margin: 5px 0 0 0;
-  font-size: 26px;
+  font-size: 48px;
 }
 
 .hero p span {
   letter-spacing: 1px;
   border-bottom: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  font-weight: 700;
 }
 
 
