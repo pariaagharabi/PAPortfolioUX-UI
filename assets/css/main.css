@@ -46,6 +46,10 @@
   --surface-color: #ffffff;
 }
 
+.light-primary-background {
+  --background-primary-color: #946577;
+}
+
 .dark-background {
   --background-color: #060606;
   --default-color: #ffffff;
