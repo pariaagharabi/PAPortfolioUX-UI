@@ -47,7 +47,8 @@
 }
 
 .light-primary-background {
-  --background-color: #e3e1e1;
+  --background-color: #f4f5f7;
+  margin-bottom: 16px;
 }
 
 .dark-background {
