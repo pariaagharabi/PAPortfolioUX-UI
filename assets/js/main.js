@@ -168,6 +168,19 @@
   });
 
   /**
+   *   Before After Slider JS Functions
+   */
+  function beforeAfter() {
+    document.getElementById('compare').style.width = document.getElementById('slider').value + "%";
+  }
+
+
+
+
+
+
+
+  /**
    * Init swiper sliders
    */
   function initSwiper() {
