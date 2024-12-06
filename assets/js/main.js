@@ -168,19 +168,6 @@
   });
 
   /**
-   *   Before After Slider JS Functions
-   */
-  function beforeAfter() {
-    document.getElementById('compare').style.width = document.getElementById('slider').value + "%";
-  }
-
-
-
-
-
-
-
-  /**
    * Init swiper sliders
    */
   function initSwiper() {
@@ -236,12 +223,21 @@
       }
     })
   }
-
-
-
-
-
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+
+
+
+
+
+
+  /**
+   *   Before After Slider JS Functions
+   */
+  function beforeAfter() {
+    document.getElementById('compare').style.width = document.getElementById('slider').value + "%";
+  }
+
+  window.addEventListener("load", beforeAfter);
 
 })();
