@@ -905,7 +905,7 @@ section,
 	width: 98vw;
 }
 .before-after-container figure { 
-	background-image: url(https://webdevtrick.com/wp-content/uploads/1st.jpg);
+  background-image: url('../../assets/img/hemaQuebec-websit-2019.png');
 	background-size: cover;
 	font-size: 0;
 	height: 100%;
@@ -914,7 +914,7 @@ section,
 	width: 100%; 
 }
 #compare {
-	background-image: url(https://webdevtrick.com/wp-content/uploads/2nd.jpg);
+  background-image: url('../../assets/img/P.png');
 	background-size: cover;
 	bottom: 0;
 	border-right: 5px solid rgba(255,255,255,0.7);
