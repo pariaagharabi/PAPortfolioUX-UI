@@ -1008,16 +1008,16 @@ input#slider::-ms-tooltip {
 
 /* Ensures that all images inside a <figure> tag are responsive */
 /* Flex container for the figure */
-figure.image-row {
+/* figure.image-row {
   display: flex;
-  justify-content: space-between;  /* Space between images */
+  justify-content: space-between; 
   max-width: 100%;
   margin-top: 40px;
-}
+} */
 
 /* Images inside the figure */
-figure.image-row img {
-  width: 48%;  /* Adjust to make them fit in a row */
+/* figure.image-row img {
+  width: 48%;  
   height: auto;
   display: block;
-}
+} */
