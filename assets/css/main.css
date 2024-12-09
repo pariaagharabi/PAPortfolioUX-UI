@@ -905,7 +905,7 @@ section,
 	width: 98vw;
 }
 .before-after-container figure { 
-  background-image: url('../../assets/img/before-accueil-desktop.png');
+  background-image: url('../../assets/img/hema-quebec/hemaQuebec-after-accueil-desktop.png');
 	background-size: cover;
 	font-size: 0;
 	height: 100%;
@@ -914,7 +914,7 @@ section,
 	width: 100%; 
 }
 #compare {
-  background-image: url('../../assets/img/hemaQuebec-after-accueil-desktop.png');
+  background-image: url('../../assets/img/hema-quebec/hemaQuebec-before-accueil-desktop.png');
 	background-size: cover;
 	bottom: 0;
 	border-right: 5px solid var(--accent-color);
