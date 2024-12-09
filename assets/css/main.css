@@ -1005,3 +1005,19 @@ input#slider::-ms-tooltip {
   100% {width: 50%; }
 }
 
+
+/* Ensures that all images inside a <figure> tag are responsive */
+/* Flex container for the figure */
+figure.image-row {
+  display: flex;
+  justify-content: space-between;  /* Space between images */
+  max-width: 100%;
+  margin-top: 40px;
+}
+
+/* Images inside the figure */
+figure.image-row img {
+  width: 48%;  /* Adjust to make them fit in a row */
+  height: auto;
+  display: block;
+}
