@@ -1005,9 +1005,9 @@ input#slider::-ms-tooltip {
   100% {width: 50%; }
 }
 
-
-/* Ensures that all images inside a <figure> tag are responsive */
-/* Flex container for the figure */
+/*--------------------------------------------------------------
+# Optimizing portfolio images for responsiveness
+--------------------------------------------------------------*/
 figure.image-row {
   display: flex;
   justify-content: space-between; 
@@ -1020,4 +1020,34 @@ figure.image-row img {
   width: 48%;  
   height: auto;
   display: block;
+}
+
+
+/*--------------------------------------------------------------
+# Password protected poertolio page Css
+--------------------------------------------------------------*/
+.password-page-header, .input-container, #requestPW, #message, #hidden {
+  text-align: center;
+  margin: 20px;
+}
+
+#requestPW {
+  margin-top: 15px;
+  line-height: 5px;
+}
+
+#hidden {
+display: none;
+}
+
+.fa-check {
+  color: green;
+  font-size: 20px;
+}
+
+.fa-check {
+  color: lightgreen;
+  background: #333;
+  font-size: 20px;
+  display: none;
 }
