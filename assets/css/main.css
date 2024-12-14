@@ -646,6 +646,12 @@ section,
   transition: all 0.3s ease-in-out; 
 }
 
+.portfolio-items-display-flex {
+  display: flex;
+  flex-direction: column; 
+  justify-content:center;
+}
+
 .portfolio .portfolio-item .portfolio-info {
   background: color-mix(in srgb, var(--background-color), transparent 10%);
   padding: 30px;
