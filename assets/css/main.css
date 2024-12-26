@@ -1022,14 +1022,9 @@ figure.image-row img {
 /*--------------------------------------------------------------
 # Password protected poertolio page Css
 --------------------------------------------------------------*/
-.password-page-header, .input-container, #requestPW, #message, #hidden {
+.password-page-header, .input-container, #message, #hidden {
   text-align: center;
   margin: 20px;
-}
-
-#requestPW {
-  margin-top: 15px;
-  line-height: 5px;
 }
 
 #hidden {
