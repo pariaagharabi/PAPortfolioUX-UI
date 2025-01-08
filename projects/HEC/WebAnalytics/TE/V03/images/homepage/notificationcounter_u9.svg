@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="28px" height="28px" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter x="720px" y="-1px" width="28px" height="28px" filterUnits="userSpaceOnUse" id="filter31">
+      <feOffset dx="1" dy="1" in="SourceAlpha" result="shadowOffsetInner" />
+      <feGaussianBlur stdDeviation="2.5" in="shadowOffsetInner" result="shadowGaussian" />
+      <feComposite in2="shadowGaussian" operator="atop" in="SourceAlpha" result="shadowComposite" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.698039215686274 0  " in="shadowComposite" />
+    </filter>
+    <g id="widget32">
+      <path d="M 733 3  C 738.04 3  742 6.96  742 12  C 742 17.04  738.04 21  733 21  C 727.96 21  724 17.04  724 12  C 724 6.96  727.96 3  733 3  Z " fill-rule="nonzero" fill="#70b603" stroke="none" />
+      <path d="M 733 3.5  C 737.76 3.5  741.5 7.24  741.5 12  C 741.5 16.76  737.76 20.5  733 20.5  C 728.24 20.5  724.5 16.76  724.5 12  C 724.5 7.24  728.24 3.5  733 3.5  Z " stroke-width="1" stroke="#ffffff" fill="none" />
+    </g>
+  </defs>
+  <g transform="matrix(1 0 0 1 -720 1 )">
+    <use xlink:href="#widget32" filter="url(#filter31)" />
+    <use xlink:href="#widget32" />
+  </g>
+</svg>

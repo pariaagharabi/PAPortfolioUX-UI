@@ -1,0 +1,75 @@
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+}
+a {
+	color: inherit;
+}
+p {
+	margin: 0px; font-feature-settings: "kern" 1; text-rendering: optimizeLegibility; -webkit-font-feature-settings: "kern"; -moz-font-feature-settings: "kern=1"; font-kerning: normal;
+}
+iframe {
+	background: rgb(255, 255, 255);
+}
+input {
+	padding: 1px 0px; box-sizing: border-box; -moz-box-sizing: border-box;
+}
+textarea {
+	margin: 0px; box-sizing: border-box; -moz-box-sizing: border-box;
+}
+div.intcases {
+	background: rgb(255, 255, 255); padding: 0px; border-radius: 3px; border: 1px solid rgb(170, 170, 170); border-image: none; text-align: left; font-family: arial; font-size: 12px; white-space: nowrap; visibility: hidden; position: absolute; z-index: 9999;
+}
+div.intcaselink {
+	background: rgb(238, 238, 238); margin: 5px; padding: 3px 8px; border-radius: 3px; border: 1px solid rgb(170, 170, 170); border-image: none; cursor: pointer;
+}
+div.refpageimage {
+	left: 0px; top: 0px; width: 16px; height: 16px; font-size: 0px; position: absolute; cursor: pointer; background-image: url("images/newwindow.gif"); background-repeat: no-repeat;
+}
+div.annnoteimage {
+	left: 0px; top: 0px; width: 13px; height: 12px; text-align: center; padding-top: 1px; font-size: 0px; position: absolute; cursor: help; box-shadow: 1px 1px 3px #aaa; background-color: rgb(19, 140, 221); -moz-box-shadow: 1px 1px 3px #aaa; -webkit-box-shadow: 1px 1px 3px #aaa;
+}
+div.annnoteline {
+	width: 9px; height: 1px; margin-top: 1px; border-bottom-color: white; border-bottom-width: 1px; border-bottom-style: solid; display: inline-block;
+}
+div.annnotelabel {
+	padding: 1px 3px; left: 0px; top: 0px; color: white; font-family: Helvetica,Arial; font-size: 10px; white-space: nowrap; position: absolute; cursor: help; box-shadow: 1px 1px 3px #aaa; background-color: rgb(19, 140, 221); -moz-box-shadow: 1px 1px 3px #aaa; -webkit-box-shadow: 1px 1px 3px #aaa;
+}
+.annotation {
+	padding-left: 2px; font-size: 12px; margin-bottom: 5px;
+}
+.annotationName {
+	font-family: "Trebuchet MS"; font-size: 14px; font-weight: bold; margin-bottom: 5px; white-space: nowrap;
+}
+.annotationValue {
+	color: rgb(74, 74, 74); line-height: 21px; font-family: Arial, Helvetica, Sans-Serif; font-size: 12px; margin-bottom: 20px;
+}
+.noteLink {
+	color: inherit; text-decoration: inherit;
+}
+.noteLink:hover {
+	background-color: white;
+}
+.dialogFix {
+	border: 1px solid rgb(143, 148, 154); border-image: none; text-align: left; position: absolute;
+}
+.legacyPulsateBorder {
+	box-shadow: 0px 0px 10px 3px #15d6ba; -moz-box-shadow: 0 0 10px 3px #15d6ba;
+}
+.pulsateBorder {
+	animation-name: pulsate; animation-duration: 0.9s; animation-timing-function: ease-in-out; animation-direction: alternate; animation-iteration-count: infinite; -webkit-animation-name: pulsate; -webkit-animation-timing-function: ease-in-out; -webkit-animation-duration: 0.9s; -webkit-animation-iteration-count: infinite; -webkit-animation-direction: alternate; -moz-animation-name: pulsate; -moz-animation-timing-function: ease-in-out; -moz-animation-duration: 0.9s; -moz-animation-iteration-count: infinite; -moz-animation-direction: alternate;
+}
+.ax_default_hidden {
+	display: none; visibility: hidden;
+}
+.ax_default_unplaced {
+	display: none; visibility: hidden;
+}
+.widgetNoteSelected {
+	box-shadow: 0px 0px 10px 3px #138cdd; -moz-box-shadow: 0 0 10px 3px #138CDD;
+}
+.singleImg {
+	display: none; visibility: hidden;
+}
