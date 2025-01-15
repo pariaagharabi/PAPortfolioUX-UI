@@ -130,14 +130,24 @@
                 <li><strong>TEAM</strong>Product Manager, Engineers</li>
                 <li><strong>TIMELINE</strong>June 2024 - Present</li>
                 <li><strong>TOOLS</strong>Figma, Notation, Canva</li>
-                <li><a
-                    href="https://www.figma.com/proto/5yaHrERjDgsqqM488RJfjU/Agartee-Patient-Data-Management-App?page-id=26%3A148&node-id=143-1334&p=f&viewport=2287%2C1564%2C0.29&t=TLnXWuptg4Em60Xo-1&scaling=scale-down&content-scaling=responsive&starting-point-node-id=228%3A744"
-                    target="_blank" class="btn-visit align-self-start">Agartee DS Overview Video</a>
+                <li>
+                  <button class="btn-visit align-self-start" id="videoBtn">Agartee DS Overview Video</button>
                 </li>
               </ul>
             </div>
           </div>
           <!-- End of Left side column -->
+
+          <!-- Start of video section -->
+          <div class="overlay" id="overlay" style="display: none;"></div>
+          <div class="video-popup" id="videoPopup" style="display: none;">
+            <span class="close-btn" id="closeBtn">&times;</span>
+            <video controls>
+              <source src="assets/video/agartee-ds-overview-video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <!-- End of video section -->
 
           <!-- Right side column -->
           <div class="col-lg-8" data-aos="fade-up">
