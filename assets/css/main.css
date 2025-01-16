@@ -1113,9 +1113,22 @@ tr:hover {
   }
 }
 
-@media (max-width: 360px){
-  .primary-btn {
-      padding: 2px;
-      font-size: 10px;
+/*--------------------------------------------------------------
+# Card Styles in Index page for mobile devices
+--------------------------------------------------------------*/
+
+.portfolio-info.portfolio-items-display-flex {
+  flex: 50%; /* Default style for larger screens */
+}
+
+
+/* Styles for mobile devices */
+@media (max-width: 767px) { /* Adjust 767px to your desired breakpoint */
+  .portfolio-info.portfolio-items-display-flex {
+    flex: 100%; /* Style for mobile screens */
+  }
+
+  .bi.bi-zoom-in {
+    margin-right: 50px; 
   }
 }
