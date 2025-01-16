@@ -1082,3 +1082,33 @@ display: none;
   cursor: pointer;
   font-size: 24px;
 }
+
+
+/*--------------------------------------------------------------
+# Table style for Agartee DS
+--------------------------------------------------------------*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 10px;
+  background-color: var(--background-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+th {
+  background-color: var(--accent-color);
+  color: white;
+}
+tr:hover {
+  background-color: #f1f1f1;
+}
+@media (max-width: 600px) {
+  th, td {
+      padding: 8px;
+      font-size: 14px;
+  }
+}
