@@ -1115,7 +1115,7 @@ tr:hover {
 
 @media (max-width: 360px){
   .primary-btn {
-      padding: 5px;
-      font-size: 12px;
+      padding: 2px;
+      font-size: 10px;
   }
 }
