@@ -1049,38 +1049,114 @@ display: none;
 /*--------------------------------------------------------------
 # Optimizing video popup for responsiveness for Agartee DS
 --------------------------------------------------------------*/
-.video-popup {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  border-radius: 10px;
-  z-index: 1000;
+.video-container{
+  margin:0 auto;
+  padding:100px 0;
+  max-width:480px;
+  width:calc(100% - 40px);
 }
-.video-popup video {
-  max-width: 90vw;
-  max-height: 90vh;
+
+.video__wrapper{
+  margin:20px 0;
+  display:inline-block;
+  position:relative;
 }
-.overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: 999;
+video{
+  width:100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  max-width:100%;
+  display:inline-block;
+  vertical-align:top;
 }
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  color: white;
-  cursor: pointer;
-  font-size: 24px;
+.video__play-button{
+  margin:0;
+  padding:0;
+  cursor:pointer;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  border:0;
+  border-radius:0;
+  background-color:rgba(0,0,0,0.8);
+  -webkit-appearance:none;
+  z-index:2;
+  transition: all 200ms ease-in-out;
+}
+
+.video__play-button-icon{
+  width:15%;
+  transition: all 200ms ease-in-out;
+}
+
+.video__play-button-icon--play polygon{
+  transform-origin: 50% 50%;
+  transition: all 200ms ease-in-out;
+}
+
+.video__play-button-icon--play:hover polygon{
+  transform: scale(1.5);
+}
+
+.video__play-button[data-button-state="pause"] .video__play-button-icon--pause{
+  display:none;
+}
+
+.video__play-button[data-button-state="play"] .video__play-button-icon--play{
+  display:none;
+}
+
+.video__play-button[data-button-state="play"] .video__play-button-icon{
+  opacity:0;
+}
+
+.video__play-button[data-button-state="play"]:hover .video__play-button-icon{
+  opacity:1;
+}
+
+.video__play-button[data-button-state="play"]{
+  background-color:rgba(0,0,0,0);
+}
+
+.video__play-button[data-button-state="play"]:hover{
+  background-color:rgba(0,0,0,.4);
+}
+
+.video__fullscreen-button{
+  margin:0;
+  padding:0;
+  position:absolute;
+  bottom:10px;
+  right:10px;
+  border:0;
+  background:transparent;
+  cursor:pointer;
+  border-radius:0;
+  -webkit-appearance:none;
+  z-index:3;
+  transition: all 200ms ease-in-out;
+}
+
+.video__fullscreen-icon{
+  padding:10px;
+  display:block;
+  vertical-align:top;
+  color:#fff;
+  opacity:0;
+  visibility:hidden;
+  transition: all 200ms ease-in-out;
+}
+
+.video__wrapper[data-state="pause"] .video__fullscreen-icon,
+.video__wrapper[data-state="play"]:hover .video__fullscreen-icon{
+  opacity:1;
+  visibility:visible;
+}
+
+.video__fullscreen-icon polygon{
+  fill:currentColor;
 }
 
 
