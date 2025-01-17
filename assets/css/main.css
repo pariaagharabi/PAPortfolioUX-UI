@@ -1118,17 +1118,35 @@ tr:hover {
 --------------------------------------------------------------*/
 
 .portfolio-info.portfolio-items-display-flex {
-  flex: 50%; /* Default style for larger screens */
+  flex: 50%;  /*Default style for larger screens*/
 }
 
 
 /* Styles for mobile devices */
-@media (max-width: 767px) { /* Adjust 767px to your desired breakpoint */
-  .portfolio-info.portfolio-items-display-flex {
-    flex: 100%; /* Style for mobile screens */
+@media only screen and (max-width: 768px) { /*Adjust 767px to your desired breakpoint */
+  .isotope-item {
+     /* Style for mobile screens */
+     flex-direction: column;
+
+     position: relative;
+    
+  }
+
+  .portfolio-image {
+    position: relative; /* Position for the image container */
   }
 
   .bi.bi-zoom-in {
-    margin-right: 50px; 
+    color: greenyellow;
+    position: absolute; /* Position the icon absolutely */
+    
+    
   }
 }
+
+
+
+
+
+
+
