@@ -298,6 +298,11 @@ h6 {
   transition: 0.3s;
 }
 
+.footer .social-links-enlarged-icons a {
+  font-size: 30px;
+  padding: 30px;
+}
+
 .footer .social-links a:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
   text-decoration: none;
