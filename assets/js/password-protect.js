@@ -21,7 +21,7 @@ function checkEnter(event) {
 
 let enterPassword = function () {
     let inputVal = document.getElementById('input').value;
-    let pw = "paria2025";
+    let pw = "padesign";
     let incorrect = "<span style='color: red'>Password incorrect. Try again.</span>";
     if (inputVal === pw) {
         document.getElementById('message').innerHTML = "";
