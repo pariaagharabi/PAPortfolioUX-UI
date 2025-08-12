@@ -1039,10 +1039,15 @@ figure.content-row  {
 
 figure.content-row {
   display: flex;
-  justify-content: space-between; /* spreads left and right */
   max-width: 100%;
+  margin: 40px 20px; /* 40px top/bottom, 20px left/right margin */
+  gap: 8px; /* small gap between columns */
 }
 
+figure.content-row > div {
+  flex: 1; /* each column takes equal space */
+  box-sizing: border-box;
+}
 
 
 figure.content-row .right-column p {
