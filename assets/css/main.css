@@ -1041,17 +1041,17 @@ figure.content-row {
   display: flex;
   justify-content: space-between; /* spreads left and right */
   max-width: 100%;
-  margin: 60px;
+  margin: 40px 80px;
 }
 
 figure.content-row > div {
-  width: 88%; /* roughly half each, leaving some gap */
+  width: 98%; 
   box-sizing: border-box;
 }
 
 figure.content-row .right-column p {
   margin: 0;
-  line-height: 1.4;
+  line-height: 2;
 }
 
 
