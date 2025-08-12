@@ -1049,12 +1049,6 @@ figure.content-row > div {
   box-sizing: border-box;
 }
 
-/* Optional: style title and description */
-figure.content-row .left-column h3 {
-  margin: 0;
-  font-weight: bold;
-}
-
 figure.content-row .right-column p {
   margin: 0;
   line-height: 1.4;
