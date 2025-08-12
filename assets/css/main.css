@@ -1044,7 +1044,6 @@ figure.content-row {
 }
 
 figure.content-row > div {
-  width: 98%; 
   box-sizing: border-box;
 }
 
