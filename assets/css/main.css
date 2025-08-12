@@ -1024,17 +1024,41 @@ figure.image-row img {
   display: block;
 }
 
-figure.content-row {
+/* figure.content-row {
   display: flex;
   justify-content: space-between; 
   max-width: 100%;
   margin-top: 40px;
 }
 
-figure.content-row img {
+figure.content-row  {
   width: 48%;  
   height: auto;
   display: block;
+} */
+
+figure.content-row {
+  display: flex;
+  justify-content: space-between; /* spreads left and right */
+  max-width: 100%;
+  margin-top: 40px;
+  gap: 4%; /* optional spacing between columns */
+}
+
+figure.content-row > div {
+  width: 48%; /* roughly half each, leaving some gap */
+  box-sizing: border-box;
+}
+
+/* Optional: style title and description */
+figure.content-row .left-column h3 {
+  margin: 0;
+  font-weight: bold;
+}
+
+figure.content-row .right-column p {
+  margin: 0;
+  line-height: 1.4;
 }
 
 
