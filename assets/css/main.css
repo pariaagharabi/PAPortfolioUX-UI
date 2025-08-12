@@ -1045,7 +1045,7 @@ figure.content-row {
 }
 
 figure.content-row > div {
-  width: 18%; /* roughly half each, leaving some gap */
+  width: 88%; /* roughly half each, leaving some gap */
   box-sizing: border-box;
 }
 
