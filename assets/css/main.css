@@ -1043,10 +1043,7 @@ figure.content-row {
   max-width: 100%;
 }
 
-/* figure.content-row > div {
-  margin: 0 60px; /* margin between left and right columns */
-  box-sizing: border-box;
-} */
+
 
 figure.content-row .right-column p {
   margin: 0;
