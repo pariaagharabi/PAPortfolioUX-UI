@@ -92,18 +92,36 @@
   /**
    * Init typed.js
    */
-  const selectTyped = document.querySelector('.typed');
-  if (selectTyped) {
-    let typed_strings = selectTyped.getAttribute('data-typed-items');
-    typed_strings = typed_strings.split(',');
-    new Typed('.typed', {
+  // const selectTyped = document.querySelector('.typed');
+  // if (selectTyped) {
+  //   let typed_strings = selectTyped.getAttribute('data-typed-items');
+  //   typed_strings = typed_strings.split(',');
+  //   new Typed('.typed', {
+  //     strings: typed_strings,
+  //     loop: true,
+  //     typeSpeed: 100,
+  //     backSpeed: 50,
+  //     backDelay: 2000
+  //   });
+  // }
+
+
+  /**
+ * Init typed.js for all elements with .typed
+ */
+  document.querySelectorAll('.typed').forEach((el) => {
+    let typed_strings = el.getAttribute('data-typed-items');
+    typed_strings = typed_strings.split(',').map(item => item.trim());
+
+    new Typed(el, { // target the actual element, not the selector string
       strings: typed_strings,
       loop: true,
       typeSpeed: 100,
       backSpeed: 50,
-      backDelay: 2000
+      backDelay: 2000,
+      contentType: 'html' // allows <strong> and other HTML
     });
-  }
+  });
 
   /**
    * Initiate Pure Counter
