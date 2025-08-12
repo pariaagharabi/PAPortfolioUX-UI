@@ -1024,6 +1024,19 @@ figure.image-row img {
   display: block;
 }
 
+figure.content-row {
+  display: flex;
+  justify-content: space-between; 
+  max-width: 100%;
+  margin-top: 40px;
+}
+
+figure.content-row img {
+  width: 48%;  
+  height: auto;
+  display: block;
+}
+
 
 /*--------------------------------------------------------------
 # Password protected poertolio page Css
