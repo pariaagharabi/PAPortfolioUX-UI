@@ -1177,5 +1177,104 @@ tr:hover {
 
 
 
+/*--------------------------------------------------------------# 
+Final Design for Portfolio Details Page
+--------------------------------------------------------------*/
+/* General reset for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+figure.content-row {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 3rem 0;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Left column styling */
+.left-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.portfolio-info h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #a83d68; /* your highlight brand color */
+  letter-spacing: 0.5px;
+}
+
+.left-column h6 {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #444;
+}
+
+.left-column ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.left-column li {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #222;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.left-column li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #a83d68;
+  font-weight: bold;
+}
+
+/* Right column with video */
+.right-column {
+  flex: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-column video {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.right-column video:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+  figure.content-row {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .right-column {
+    margin-top: 1.5rem;
+  }
+}
 
 
