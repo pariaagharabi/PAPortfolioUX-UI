@@ -1176,4 +1176,42 @@ tr:hover {
 }
 
 
+/*--------------------------------------------------------------
+# Responsive Atomic design Styles for Application Page
+--------------------------------------------------------------*/
+.atomic-imgs-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
+.atomic-img img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.atomic-img img:hover {
+  transform: scale(1.03);
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+  .atomic-imgs-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Medium screens */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .atomic-imgs-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
