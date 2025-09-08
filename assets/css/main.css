@@ -1188,8 +1188,14 @@ tr:hover {
   margin: 0 auto;
 }
 
+.atomic-img {
+  display: flex;                 /* centers the image inside */
+  justify-content: center;
+  align-items: center;
+}
+
 .atomic-img img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   object-fit: contain;
   border-radius: 12px;
@@ -1204,15 +1210,14 @@ tr:hover {
 /* Small screens */
 @media (max-width: 600px) {
   .atomic-imgs-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* stack vertically */
     gap: 1rem;
-    text-align: center;
   }
 }
 
 /* Medium screens */
 @media (min-width: 601px) and (max-width: 1024px) {
   .atomic-imgs-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
   }
 }
