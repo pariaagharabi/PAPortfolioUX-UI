@@ -1198,7 +1198,7 @@ tr:hover {
   max-width: 100%;
   /* height: auto; */
   object-fit: contain;
-  border-radius: 12px;
+  border-radius: 18px solid #E4E7E8;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
