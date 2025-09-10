@@ -1230,18 +1230,21 @@ tr:hover {
   display: flex;
   gap: 1rem;
   justify-content: center;
-  align-items: stretch; /* ✅ stretch to same height */
-  flex-wrap: wrap;      /* ✅ stack on small screens */
+  align-items: stretch; /* make all images same height */
+  flex-wrap: wrap;      /* stack on small screens */
 }
 
 .analytics-results img {
   flex: 1 1 300px;      /* min width before wrapping */
   max-width: 100%;
-  height: auto;         /* allow height to adjust */
-  max-height: 320px;    /* cap height on large screens */
-  object-fit: cover;    /* crops edges if needed */
+  height: auto;         
+  max-height: 500px;    /* 🔹 taller images */
+  object-fit: cover;    
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.analytics-results img:hover {
+  transform: scale(1.02);
 }
 
 
