@@ -1224,22 +1224,24 @@ tr:hover {
 
 
 /*--------------------------------------------------------------
-# Responsive Handoff images for Application Page
+# Responsive HOTJAR AND GOOGLE ANALYTICS RESULTS imgs
 --------------------------------------------------------------*/
-.handoff-imgs {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+.analytics-results {
+  display: flex;
   gap: 1rem;
-  justify-items: center;
-  align-items: center;
-  padding: 1rem;
+  justify-content: center;
+  align-items: stretch; /* ✅ stretch to same height */
+  flex-wrap: wrap;      /* ✅ stack on small screens */
 }
 
-.handoff-imgs img {
-  height: 350px;         /* 🔹 set consistent height */
-  width: 100%;           /* take available width */
-  object-fit: cover;     /* crop edges if needed to fill space */
+.analytics-results img {
+  flex: 1 1 300px;      /* min width before wrapping */
+  max-width: 100%;
+  height: auto;         /* allow height to adjust */
+  max-height: 320px;    /* cap height on large screens */
+  object-fit: cover;    /* crops edges if needed */
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+
 
