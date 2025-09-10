@@ -1221,3 +1221,23 @@ tr:hover {
     grid-template-columns: repeat(2, 1fr); /* 2 per row */
   }
 }
+
+
+/*--------------------------------------------------------------
+# Responsive Handoff images for Application Page
+--------------------------------------------------------------*/
+.handoff-imgs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.handoff-imgs img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;   /* optional */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* optional */
+}
