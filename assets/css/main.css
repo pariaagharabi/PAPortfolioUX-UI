@@ -1236,8 +1236,10 @@ tr:hover {
 }
 
 .handoff-imgs img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;   /* optional */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* optional */
+  height: 350px;         /* 🔹 set consistent height */
+  width: 100%;           /* take available width */
+  object-fit: cover;     /* crop edges if needed to fill space */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+
