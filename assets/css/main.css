@@ -1247,4 +1247,26 @@ tr:hover {
   transform: scale(1.03);
 }
 
+/*--------------------------------------------------------------
+# Responsive Portfolio LOGOS in Portfolio Details page
+--------------------------------------------------------------*/
+
+.portfolio-tools {
+  display: flex;
+  flex-wrap: wrap;      /* ✅ allows wrapping on small screens */
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  align-items: center;
+  justify-content: center; /* ✅ center logos on all devices */
+}
+
+.portfolio-tools img {
+  height: 16px;
+  width: auto;
+  display: block;
+}
+
+
 
