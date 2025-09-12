@@ -1250,23 +1250,37 @@ tr:hover {
 /*--------------------------------------------------------------
 # Responsive Portfolio LOGOS in Portfolio Details page
 --------------------------------------------------------------*/
-
 .portfolio-tools {
   display: flex;
-  flex-wrap: wrap;      /* ✅ allows wrapping on small screens */
+  flex-wrap: wrap;        /* ✅ wrap on small screens */
   gap: 12px;
   padding: 0;
   margin: 0;
   list-style: none;
-  align-items: center;
-  justify-content: center; /* ✅ center logos on all devices */
+  align-items: left;
+  justify-content: left;
 }
 
 .portfolio-tools img {
-  height: 16px;
+  height: 16px;           /* ✅ default size (mobile) */
   width: auto;
   display: block;
 }
+
+/* For tablets and up */
+@media (min-width: 768px) {
+  .portfolio-tools img {
+    height: 24px;         /* ✅ bigger logos on tablets/laptops */
+  }
+}
+
+/* For desktops and large screens */
+@media (min-width: 1200px) {
+  .portfolio-tools img {
+    height: 28px;         /* ✅ even bigger logos on wide screens */
+  }
+}
+
 
 
 
