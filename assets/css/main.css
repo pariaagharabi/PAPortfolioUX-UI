@@ -1286,6 +1286,14 @@ tr:hover {
 /*--------------------------------------------------------------
 # Clarity, Reliability, and Real-time Section
 --------------------------------------------------------------*/
+body {
+  background: #0e0f10;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #e5e5e5;
+}
+
 .principles {
   display: flex;
   justify-content: space-around;
@@ -1296,30 +1304,38 @@ tr:hover {
 }
 
 .item {
-  text-align: left;
   position: relative;
-  width: 280px;
+  display: flex;
+  align-items: center;
+  gap: 20px; /* space between big letter and text */
 }
 
 .initial {
-  display: block;
-  font-size: 70px;
+  font-size: 140px;      /* large enough to let text sit inside */
   font-weight: 300;
-  color: rgba(50, 100, 95, 0.25); /* subtle green tint */
-  margin-bottom: 5px;
+  line-height: 0.8;
+  color: rgba(60, 120, 110, 0.22);
+  display: block;
 }
 
-.item h3 {
+.text {
+  position: relative;
+  z-index: 2; /* ensures text is on top */
+  margin-left: -80px; /* moves text inside the body of the big letter */
+}
+
+.text h3 {
+  margin: 0;
   font-size: 20px;
   font-weight: 600;
-  margin: 0 0 6px;
 }
 
-.item p {
+.text p {
+  margin: 2px 0 0;
   font-size: 14px;
   color: #c6c6c6;
-  margin: 0;
 }
+
 
 
 
