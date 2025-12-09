@@ -1286,56 +1286,73 @@ tr:hover {
 /*--------------------------------------------------------------
 # Clarity, Reliability, and Real-time Section
 --------------------------------------------------------------*/
-body {
-  background: #0e0f10;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  color: #e5e5e5;
-}
-
 .principles {
   display: flex;
   justify-content: space-around;
-  align-items: flex-start;
-  padding: 80px 0;
+  padding: 80px 20px;
   max-width: 1400px;
   margin: auto;
+  flex-wrap: wrap;
+  gap: 60px;
 }
 
 .item {
   position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 20px; /* space between big letter and text */
+  width: 320px;
+  height: 200px;
 }
 
+/* Big initial */
 .initial {
-  font-size: 140px;      /* large enough to let text sit inside */
+  font-size: 11vw;
   font-weight: 300;
   line-height: 0.8;
-  color: rgba(60, 120, 110, 0.22);
-  display: block;
+  color: var(--accent-color)
 }
 
+/* Text inside initial but slightly shifted right */
 .text {
-  position: relative;
-  z-index: 2; /* ensures text is on top */
-  margin-left: -80px; /* moves text inside the body of the big letter */
+  position: absolute;
+  top: 50%;
+  left: 58%;                   /* increased spacing from initial */
+  transform: translateY(-50%);
+  text-align: left;
 }
 
 .text h3 {
-  margin: 0;
-  font-size: 20px;
+  margin: 0 0 6px 0;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
 .text p {
-  margin: 2px 0 0;
-  font-size: 14px;
-  color: #c6c6c6;
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--accent-color-light);
 }
 
+/* ---- MOBILE VERSION ---- */
+@media (max-width: 700px) {
+  .principles {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
 
+  .item {
+    width: 100%;
+    max-width: 340px;
+    height: 180px;
+  }
 
+  .initial {
+    font-size: 22vw;
+  }
 
+  .text {
+    left: 62%;                 /* extra spacing for mobile too */
+  }
+}
