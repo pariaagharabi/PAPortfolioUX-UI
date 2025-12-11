@@ -27,6 +27,10 @@
   --border-color:#d1d1d1; /* border color for each card item */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --danger-card-color: #DC3545;
+  --danger-card-bg-color-opacity: hsla(354, 39%, 49%, 0.048);
+  --success-card-color: #4CAF50;
+  --success-card-bg-color-opacity: hsla(122, 39%, 49%, 0.048);
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -613,12 +617,13 @@ section,
   cursor: pointer;
   display: inline-block;
   padding: 8px 20px 10px 20px;
-  margin: 0;
-  font-size: 15px;
-  font-weight: 500;
+  margin: 10px;
+  font-size: 25px;
+  font-weight: 600;
   line-height: 1;
   margin-bottom: 5px;
   border-radius: 50px;
+  box-shadow: #946577 0px 4px 8px 0px;
   transition: all 0.3s ease-in-out;
   font-family: var(--heading-font);
 }
@@ -1377,3 +1382,189 @@ tr:hover {
     left: 62%;                 /* extra spacing for mobile too */
   }
 }
+
+/*--------------------------------------------------------------
+# Filtering Authentication System, Clinical Dashboard, Alert Ecosystem, Data Synchronization Section
+--------------------------------------------------------------*/
+
+header {
+      display: flex;
+      align-items: flex-start;
+      gap: 3rem;
+      margin-bottom: 4rem;
+    }
+
+    .section-number {
+      font-size: 5rem;
+      font-weight: 900;
+      opacity: 0.15;
+      line-height: 1;
+    }
+
+    .header-content h1 {
+      font-size: 2.8rem;
+      margin: 0 0 1rem;
+      font-weight: 700;
+    }
+
+    .header-content p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 600px;
+    }
+
+    .shield {
+      width: 120px;
+      height: 120px;
+      background: rgba(0, 200, 160, 0.15);
+      border-radius: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-self: flex-start;
+      margin-left: auto;
+    }
+
+    .shield i {
+      font-size: 4rem;
+      color: var(--green);
+    }
+
+    .insight {
+      background: rgba(0, 200, 160, 0.15);
+      border-radius: 16px;
+      padding: 1rem 1.5rem;
+      font-style: italic;
+      margin-top: 1.5rem;
+      border-left: 4px solid var(--green);
+    }
+
+    .boxes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .box {
+      background: var(--nav-mobile-background-color);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 2rem;
+    }
+
+    .challenge { 
+      background-color: var(--danger-card-bg-color-opacity);      
+      border: 0.8px solid var(--danger-card-color);
+      border-left: 6px solid var(--danger-card-color); 
+    }
+
+    .solution  {       
+      background-color: var(--success-card-bg-color-opacity);      
+      border: 0.8px solid var(--success-card-color);
+      border-left: 6px solid var(--success-card-color);
+    }
+
+    .box h3 {
+      margin: 0 0 1rem;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .box h3 i {
+      font-size: 1.8rem;
+    }
+
+    .capabilities {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+
+    .cap-card {
+      background: var(--card);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 1.8rem;
+      text-align: center;
+      border: 1px solid rgba(100, 200, 200, 0.1);
+    }
+
+    .cap-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      background: rgba(0, 200, 160, 0.2);
+      color: var(--green);
+      border-radius: 50%;
+      font-weight: bold;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      font-size: 1.1rem;
+    }
+
+    .before, .after {
+      background: var(--card);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 2rem;
+    }
+
+    .before { border-left: 5px solid var(--red); }
+    .after  { border-left: 5px solid var(--green); }
+
+    .before h3, .after h3 {
+      color: var(--red);
+      margin-bottom: 1.5rem;
+    }
+
+    .after h3 {
+      color: var(--green);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 0.9rem;
+      padding-left: 1.8rem;
+      position: relative;
+    }
+
+    .before li:before {
+      content: "✕";
+      color: var(--red);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+
+    .after li:before {
+      content: "✓";
+      color: var(--green);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      header { flex-direction: column; }
+      .shield { margin-left: 0; margin-top: 2rem; }
+      .boxes, .comparison { grid-template-columns: 1fr; }
+      .section-number { font-size: 4rem; }
+      .header-content h1 { font-size: 2.2rem; }
+    }
