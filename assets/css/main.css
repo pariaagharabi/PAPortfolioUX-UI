@@ -31,6 +31,7 @@
   --danger-card-bg-color-opacity: hsla(354, 39%, 49%, 0.048);
   --success-card-color: #4CAF50;
   --success-card-bg-color-opacity: hsla(122, 39%, 49%, 0.048);
+  --card-background-color-opacity: hsla(337, 77%, 91%, 0.172); /* Card background color with opacity for glassmorphism effect */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -1386,8 +1387,7 @@ tr:hover {
 /*--------------------------------------------------------------
 # Filtering Authentication System, Clinical Dashboard, Alert Ecosystem, Data Synchronization Section
 --------------------------------------------------------------*/
-
-header {
+.design-solution-case-header {
       display: flex;
       align-items: flex-start;
       gap: 3rem;
@@ -1397,23 +1397,24 @@ header {
     .section-number {
       font-size: 5rem;
       font-weight: 900;
-      opacity: 0.15;
       line-height: 1;
-    }
+      color: var(--accent-color);
+      font-family: 'Geist Mono', 'Courier New';
+      opacity: 0.8;
+  }
 
-    .header-content h1 {
+  .design-solution-case-header-content h1 {
       font-size: 2.8rem;
       margin: 0 0 1rem;
       font-weight: 700;
     }
 
-    .header-content p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-      max-width: 600px;
+    .design-solution-authentication-performance {
+      color: var(--accent-color);
+      text-shadow: 0 0 10px #946577;
     }
 
-    .shield {
+    .authentication-shield {
       width: 120px;
       height: 120px;
       background: rgba(0, 200, 160, 0.15);
@@ -1425,21 +1426,12 @@ header {
       margin-left: auto;
     }
 
-    .shield i {
+    .authentication-shield i {
       font-size: 4rem;
       color: var(--green);
     }
 
-    .insight {
-      background: rgba(0, 200, 160, 0.15);
-      border-radius: 16px;
-      padding: 1rem 1.5rem;
-      font-style: italic;
-      margin-top: 1.5rem;
-      border-left: 4px solid var(--green);
-    }
-
-    .boxes {
+    .authentication-boxes {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
@@ -1447,37 +1439,34 @@ header {
     }
 
     .box {
-      background: var(--nav-mobile-background-color);
+      background: var(--card);
       backdrop-filter: blur(12px);
       border-radius: 20px;
       padding: 2rem;
+      border: 1px solid rgba(100, 200, 200, 0.1);
     }
 
-    .challenge { 
-      background-color: var(--danger-card-bg-color-opacity);      
+    .authentication-box-challenge { 
+      background-color: var(--danger-card-bg-color-opacity);
       border: 0.8px solid var(--danger-card-color);
       border-left: 6px solid var(--danger-card-color); 
     }
 
-    .solution  {       
-      background-color: var(--success-card-bg-color-opacity);      
+    .authentication-box-solution  {
+      background-color: var(--success-card-bg-color-opacity); 
       border: 0.8px solid var(--success-card-color);
-      border-left: 6px solid var(--success-card-color);
+      border-left: 6px solid var(--success-card-color); 
     }
 
-    .box h3 {
-      margin: 0 0 1rem;
-      font-size: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
+    .authentication-box-challenge h3{
+      color: var(--danger-card-color);
     }
 
-    .box h3 i {
-      font-size: 1.8rem;
+    .authentication-box-solution h3 {
+      color: var(--success-card-color);
     }
 
-    .capabilities {
+   .capabilities {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
@@ -1485,12 +1474,11 @@ header {
     }
 
     .cap-card {
-      background: var(--card);
-      backdrop-filter: blur(12px);
+      background-color: var(--card-background-color-opacity);
       border-radius: 16px;
       padding: 1.8rem;
-      text-align: center;
-      border: 1px solid rgba(100, 200, 200, 0.1);
+      text-align: left;
+      border: 1px solid var(--accent-color);
     }
 
     .cap-number {
@@ -1499,8 +1487,9 @@ header {
       justify-content: center;
       width: 48px;
       height: 48px;
-      background: rgba(0, 200, 160, 0.2);
-      color: var(--green);
+      color: var(--contrast-color);
+      font-family: 'Geist Mono', 'Courier New';
+      background-color: var(--accent-color);
       border-radius: 50%;
       font-weight: bold;
       font-size: 1.3rem;
@@ -1512,59 +1501,4 @@ header {
       grid-template-columns: 1fr 1fr;
       gap: 3rem;
       font-size: 1.1rem;
-    }
-
-    .before, .after {
-      background: var(--card);
-      backdrop-filter: blur(12px);
-      border-radius: 20px;
-      padding: 2rem;
-    }
-
-    .before { border-left: 5px solid var(--red); }
-    .after  { border-left: 5px solid var(--green); }
-
-    .before h3, .after h3 {
-      color: var(--red);
-      margin-bottom: 1.5rem;
-    }
-
-    .after h3 {
-      color: var(--green);
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    li {
-      margin-bottom: 0.9rem;
-      padding-left: 1.8rem;
-      position: relative;
-    }
-
-    .before li:before {
-      content: "✕";
-      color: var(--red);
-      position: absolute;
-      left: 0;
-      font-weight: bold;
-    }
-
-    .after li:before {
-      content: "✓";
-      color: var(--green);
-      position: absolute;
-      left: 0;
-      font-weight: bold;
-    }
-
-    @media (max-width: 768px) {
-      header { flex-direction: column; }
-      .shield { margin-left: 0; margin-top: 2rem; }
-      .boxes, .comparison { grid-template-columns: 1fr; }
-      .section-number { font-size: 4rem; }
-      .header-content h1 { font-size: 2.2rem; }
     }
