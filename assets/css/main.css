@@ -1508,3 +1508,67 @@ tr:hover {
 # Strategic Outcomes Section
 --------------------------------------------------------------*/
 
+.cards-strategic-outcomes-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin-top: 80px;
+}
+.card-strategic-outcomes-container {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 32px;
+    backdrop-filter: blur(12px);
+  }
+        .card-header-strategic-outcomes-container {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .icon-strategic-outcomes-container {
+            font-size: 36px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+        }
+        .label-strategic-outcomes-container {
+            font-size: 13px;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+        .high {
+            background-color: rgba(0, 255, 204, 0.15);
+            color: #00ffcc;
+            border: 1px solid #00ffcc;
+        }
+        .critical {
+            background-color: rgba(255, 68, 68, 0.15);
+            color: #ff4444;
+            border: 1px solid #ff4444;
+        }
+        .strategic {
+            background-color: rgba(255, 255, 0, 0.15);
+            color: #ffff00;
+            border: 1px solid #ffff00;
+        }
+        .required {
+            background-color: rgba(0, 170, 255, 0.15);
+            color: #00aaff;
+            border: 1px solid #00aaff;
+        }
+        .card-title-strategic-outcomes-container {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+        }
+        .card-body-strategic-outcomes-container {
+            font-size: 16px;
+            line-height: 1.7;
+            opacity: 0.9;
+        }
