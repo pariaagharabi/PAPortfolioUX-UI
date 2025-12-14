@@ -1508,21 +1508,6 @@ tr:hover {
 # Strategic Outcomes Section
 --------------------------------------------------------------*/
 
-.strategic-outcomes-section {
-      border-top: 1px solid #e0e0e0;
-    }
-
-    .strategic-outcomes-container{
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 5rem 1.5rem;
-    }
-
-    @media (min-width: 768px) {
-      .container {
-        padding: 7rem 3rem;
-      }
-    }
 
     .grid-layout-strategic-outcomes-container {
       display: grid;
