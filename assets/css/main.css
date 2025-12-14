@@ -1509,38 +1509,37 @@ tr:hover {
 --------------------------------------------------------------*/
 
 .cards-strategic-outcomes-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
-    margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
 }
+
 .card-strategic-outcomes-container {
-    background-color: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    padding: 32px;
-    backdrop-filter: blur(12px);
-  }
-        .card-header-strategic-outcomes-container {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 20px;
-        }
-        .icon-strategic-outcomes-container {
-            font-size: 36px;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 20px;
-        }
-        .label-strategic-outcomes-container {
-            font-size: 13px;
-            font-weight: bold;
-            padding: 6px 12px;
-            border-radius: 8px;
-            margin-bottom: 8px;
+  border: 1px solid var(--accent-color);
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.card-header-strategic-outcomes-container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.icon-strategic-outcomes-container {
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.label-strategic-outcomes-container {
+  font-size: 13px;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
         }
         .high {
             background-color: rgba(0, 255, 204, 0.15);
