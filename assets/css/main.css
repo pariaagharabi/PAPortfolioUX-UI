@@ -1313,76 +1313,71 @@ tr:hover {
 /*--------------------------------------------------------------
 # Clarity, Reliability, and Real-time Section
 --------------------------------------------------------------*/
-.principles {
+/* Container for the three items */
+.crr-container {
   display: flex;
-  justify-content: space-around;
-  padding: 80px 20px;
-  max-width: 1400px;
-  margin: auto;
-  flex-wrap: wrap;
-  gap: 60px;
+  justify-content: space-around; /* Even horizontal spacing */
+  align-items: flex-start;       /* Align text properly with letters */
+  flex-wrap: wrap;               /* Allows wrapping on smaller screens */
+  gap: 20px;                     /* Optional spacing between items */
+  padding: 40px 20px;
 }
 
-.item {
-  position: relative;
+/* Each letter + text block */
+.crr-item {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 320px;
-  height: 200px;
+  flex-direction: column;
+  align-items: center;           /* Centers the text under the letter */
+  max-width: 200px;              /* Optional: limits width on large screens */
 }
 
-/* Big initial */
-.initial {
-  font-size: 11vw;
-  font-weight: 300;
-  line-height: 0.8;
-  color: var(--accent-color)
+/* Big letter */
+.crr-item .letter {
+  font-size: 80px;               /* Adjust size as needed */
+  font-weight: bold;
+  color: #9b3661;                /* Example color from image */
+  line-height: 1;
 }
 
-/* Text inside initial but slightly shifted right */
-.text {
-  position: absolute;
-  top: 50%;
-  left: 58%;                   /* increased spacing from initial */
-  transform: translateY(-50%);
-  text-align: left;
+/* Description text */
+.crr-item .title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
 }
 
-.text h3 {
-  margin: 0 0 6px 0;
-  font-size: 1.2rem;
-  font-weight: 600;
+.crr-item .subtitle {
+  font-size: 14px;
+  font-style: italic;
+  text-align: center;
+  margin-top: 5px;
+  color: #555;
 }
 
-.text p {
-  margin: 0;
-  font-size: 0.9rem;
-  color: var(--accent-color-light);
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .crr-item .letter {
+    font-size: 60px;
+  }
 }
 
-/* ---- MOBILE VERSION ---- */
-@media (max-width: 700px) {
-  .principles {
+@media (max-width: 768px) {
+  .crr-container {
     flex-direction: column;
     align-items: center;
-    gap: 40px;
   }
 
-  .item {
-    width: 100%;
-    max-width: 340px;
-    height: 180px;
+  .crr-item {
+    max-width: 90%;
+    margin-bottom: 30px;
   }
 
-  .initial {
-    font-size: 22vw;
-  }
-
-  .text {
-    left: 62%;                 /* extra spacing for mobile too */
+  .crr-item .letter {
+    font-size: 50px;
   }
 }
+
 
 /*--------------------------------------------------------------
 # Filtering Authentication System, Clinical Dashboard, Alert Ecosystem, Data Synchronization Section
