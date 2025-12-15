@@ -1701,3 +1701,29 @@ tr:hover {
 --------------------------------------------------------------*/
 
 /* align-items-center */
+.icon-circle-stats {
+  width: 60px;
+  height: 60px;
+
+  /* Create the circle shape */
+  border-radius: 50%;
+
+  /* Set the requested background color */
+  background-color: #a83d68;
+
+  /* Use Flexbox for perfect centering of the icon inside */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+
+  /* Optional: Add a margin to separate it from other elements */
+  margin: 10px;
+}
+
+.icon-circle-stats i {
+  /* Set the color of the icon */
+  color: white;
+
+  /* Set the size of the icon (adjust as needed) */
+  font-size: 24px;
+}
