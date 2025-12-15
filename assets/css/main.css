@@ -1699,31 +1699,24 @@ tr:hover {
 /*--------------------------------------------------------------
 # Strategic Outcomes Section
 --------------------------------------------------------------*/
+.align-items-center-stats {
+ display: flex;
+  align-items: center;
+  text-align: center;
+}
 
-/* align-items-center */
 .icon-circle-stats {
   width: 60px;
   height: 60px;
-
-  /* Create the circle shape */
   border-radius: 50%;
-
-  /* Set the requested background color */
-  background-color: #a83d68;
-
-  /* Use Flexbox for perfect centering of the icon inside */
+  background-color: var(--accent-color);
+  justify-content: center;
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-
-  /* Optional: Add a margin to separate it from other elements */
+  align-items: center;
   margin: 10px;
 }
 
 .icon-circle-stats i {
-  /* Set the color of the icon */
   color: white;
-
-  /* Set the size of the icon (adjust as needed) */
   font-size: 24px;
 }
