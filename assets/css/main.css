@@ -1412,7 +1412,8 @@ tr:hover {
     .authentication-shield {
       width: 120px;
       height: 120px;
-      background: rgba(0, 200, 160, 0.15);
+      background: #9b3661;
+      color: var(--contrast-color);
       border-radius: 24px;
       display: flex;
       align-items: center;
