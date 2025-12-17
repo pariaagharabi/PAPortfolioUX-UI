@@ -269,7 +269,7 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
-  // window.addEventListener("load", beforeAfter);
+  window.addEventListener("load", beforeAfter);
 
 
 
