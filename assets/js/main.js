@@ -269,5 +269,78 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
-  window.addEventListener("load", beforeAfter);
+  // window.addEventListener("load", beforeAfter);
+
+
+
+
+
+
+
+  // Reusable before-after slider function
+  function initBeforeAfter(containerId, sliderId, beforeImageUrl, afterImageUrl) {
+    const container = document.getElementById(containerId);
+    const slider = document.getElementById(sliderId);
+
+    if (!container || !slider) return;
+
+    // Set the BEFORE image as background of the container
+    container.style.backgroundImage = `url('${beforeImageUrl}')`;
+    container.style.backgroundSize = "cover";
+    container.style.backgroundPosition = "center";
+    container.style.position = "relative";
+    container.style.overflow = "hidden";
+    container.style.width = "100%";
+    container.style.height = "500px"; // Adjust height if needed
+
+    // Create the AFTER image layer
+    const afterLayer = document.createElement("div");
+    afterLayer.style.backgroundImage = `url('${afterImageUrl}')`;
+    afterLayer.style.backgroundSize = "cover";
+    afterLayer.style.backgroundPosition = "center";
+    afterLayer.style.position = "absolute";
+    afterLayer.style.top = "0";
+    afterLayer.style.left = "0";
+    afterLayer.style.width = "100%";
+    afterLayer.style.height = "100%";
+    afterLayer.style.transition = "all 0.3s ease";
+
+    // Clip the after layer based on slider value
+    function updateClip() {
+      afterLayer.style.clipPath = `inset(0 ${100 - slider.value}% 0 0)`;
+    }
+
+    // Initial setup
+    container.innerHTML = ""; // Clear any old content
+    container.appendChild(afterLayer);
+    updateClip();
+
+    // Update on slider change
+    slider.addEventListener("input", updateClip);
+  }
+
+  // Initialize sliders when page loads
+  window.addEventListener("load", function () {
+    // Only run the ones that exist on the current page
+
+    // For Hema-Quebec page
+    if (document.getElementById("compare") && document.getElementById("slider")) {
+      initBeforeAfter(
+        "compare",
+        "slider",
+        "assets/img/portfolio/hema-quebec-before.jpg",  // ← Change to your actual before path
+        "assets/img/portfolio/hema-quebec-after.jpg"    // ← Change to your actual after path
+      );
+    }
+
+    // For AGREE Redesigned App page
+    if (document.getElementById("compare-app") && document.getElementById("slider-app")) {
+      initBeforeAfter(
+        "compare-app",
+        "slider-app",
+        "assets/img/portfolio/agree-before.jpg",   // ← Your AGREE before image
+        "assets/img/portfolio/agree-after.jpg"     // ← Your AGREE redesigned after image
+      );
+    }
+  });
 })();
