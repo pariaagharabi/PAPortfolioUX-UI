@@ -272,11 +272,6 @@
   window.addEventListener("load", beforeAfter);
 
 
-
-
-
-
-
   // Reusable before-after slider function
   function initBeforeAfter(containerId, sliderId, beforeImageUrl, afterImageUrl) {
     const container = document.getElementById(containerId);
@@ -328,8 +323,8 @@
       initBeforeAfter(
         "compare",
         "slider",
-        "assets/img/portfolio/hema-quebec-before.jpg",  // ← Change to your actual before path
-        "assets/img/portfolio/hema-quebec-after.jpg"    // ← Change to your actual after path
+        "assets/img/portfolio/hema-quebec-before.jpg",  
+        "assets/img/portfolio/hema-quebec-after.jpg"    
       );
     }
 
@@ -338,8 +333,8 @@
       initBeforeAfter(
         "compare-app",
         "slider-app",
-        "assets/img/portfolio/agree-before.jpg",   // ← Your AGREE before image
-        "assets/img/portfolio/agree-after.jpg"     // ← Your AGREE redesigned after image
+        "assets/img/agartee-redesigned-app/agartee-before-redesigned-app.png",  // BEFORE
+        "assets/img/agartee-redesigned-app/agartee-after-redesigned-app.png"    // AFTER (redesigned)
       );
     }
   });
