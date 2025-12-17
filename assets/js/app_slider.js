@@ -1,3 +1,3 @@
 function beforeAfter() {
-  document.getElementById('slider-app').style.width = document.getElementById('slider').value + "%";
+  document.getElementById('equate').style.width = document.getElementById('slider').value + "%";
 }
