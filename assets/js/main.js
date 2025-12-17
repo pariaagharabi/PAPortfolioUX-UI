@@ -272,70 +272,131 @@
   window.addEventListener("load", beforeAfter);
 
 
-  // Reusable before-after slider function
-  function initBeforeAfter(containerId, sliderId, beforeImageUrl, afterImageUrl) {
-    const container = document.getElementById(containerId);
-    const slider = document.getElementById(sliderId);
+})();
 
-    if (!container || !slider) return;
+// Reusable before-after slider – classic width-based overlay (most reliable)
+function initBeforeAfter(containerId, sliderId, beforeImageUrl, afterImageUrl) {
+  const container = document.getElementById(containerId);
+  const slider = document.getElementById(sliderId);
 
-    // Set the BEFORE image as background of the container
-    container.style.backgroundImage = `url('${beforeImageUrl}')`;
-    container.style.backgroundSize = "cover";
-    container.style.backgroundPosition = "center";
-    container.style.position = "relative";
-    container.style.overflow = "hidden";
-    container.style.width = "100%";
-    container.style.height = "500px"; // Adjust height if needed
+  if (!container || !slider) return;
 
-    // Create the AFTER image layer
-    const afterLayer = document.createElement("div");
-    afterLayer.style.backgroundImage = `url('${afterImageUrl}')`;
-    afterLayer.style.backgroundSize = "cover";
-    afterLayer.style.backgroundPosition = "center";
-    afterLayer.style.position = "absolute";
-    afterLayer.style.top = "0";
-    afterLayer.style.left = "0";
-    afterLayer.style.width = "100%";
-    afterLayer.style.height = "100%";
-    afterLayer.style.transition = "all 0.3s ease";
+  // Container styles
+  container.style.position = "relative";
+  container.style.overflow = "hidden";
+  container.style.width = "100%";
+  container.style.backgroundImage = `url('${beforeImageUrl}')`;
+  container.style.backgroundSize = "cover";
+  container.style.backgroundPosition = "center";
 
-    // Clip the after layer based on slider value
-    function updateClip() {
-      afterLayer.style.clipPath = `inset(0 ${100 - slider.value}% 0 0)`;
-    }
+  // Before label (optional – you can remove if you don't want text)
+  const beforeLabel = document.createElement("div");
+  beforeLabel.textContent = "Before";
+  beforeLabel.style.position = "absolute";
+  beforeLabel.style.bottom = "20px";
+  beforeLabel.style.left = "20px";
+  beforeLabel.style.background = "rgba(0,0,0,0.6)";
+  beforeLabel.style.color = "white";
+  beforeLabel.style.padding = "8px 16px";
+  beforeLabel.style.borderRadius = "4px";
+  beforeLabel.style.zIndex = "10";
+  beforeLabel.style.fontFamily = "Arial, sans-serif";
+  beforeLabel.style.fontSize = "18px";
 
-    // Initial setup
-    container.innerHTML = ""; // Clear any old content
-    container.appendChild(afterLayer);
-    updateClip();
+  // After layer (the part that moves)
+  const afterLayer = document.createElement("div");
+  afterLayer.style.position = "absolute";
+  afterLayer.style.top = "0";
+  afterLayer.style.left = "0";
+  afterLayer.style.width = "50%"; // starts at 50%
+  afterLayer.style.height = "100%";
+  afterLayer.style.backgroundImage = `url('${afterImageUrl}')`;
+  afterLayer.style.backgroundSize = "cover";
+  afterLayer.style.backgroundPosition = "center";
+  afterLayer.style.transition = "width 0.2s ease";
 
-    // Update on slider change
-    slider.addEventListener("input", updateClip);
+  // After label
+  const afterLabel = document.createElement("div");
+  afterLabel.textContent = "After";
+  afterLabel.style.position = "absolute";
+  afterLabel.style.bottom = "20px";
+  afterLabel.style.right = "20px";
+  afterLabel.style.background = "rgba(0,0,0,0.6)";
+  afterLabel.style.color = "white";
+  afterLabel.style.padding = "8px 16px";
+  afterLabel.style.borderRadius = "4px";
+  afterLabel.style.zIndex = "10";
+  afterLabel.style.fontFamily = "Arial, sans-serif";
+  afterLabel.style.fontSize = "18px";
+
+  // Handle (the vertical line + arrow)
+  const handle = document.createElement("div");
+  handle.style.position = "absolute";
+  handle.style.top = "0";
+  handle.style.left = "50%";
+  handle.style.width = "4px";
+  handle.style.height = "100%";
+  handle.style.background = "white";
+  handle.style.transform = "translateX(-50%)";
+  handle.style.pointerEvents = "none";
+  handle.style.zIndex = "20";
+
+  const circle = document.createElement("div");
+  circle.innerHTML = "↔";
+  circle.style.position = "absolute";
+  circle.style.top = "50%";
+  circle.style.left = "50%";
+  circle.style.transform = "translate(-50%, -50%) rotate(90deg)";
+  circle.style.width = "50px";
+  circle.style.height = "50px";
+  circle.style.background = "white";
+  circle.style.borderRadius = "50%";
+  circle.style.display = "flex";
+  circle.style.alignItems = "center";
+  circle.style.justifyContent = "center";
+  circle.style.fontSize = "24px";
+  circle.style.boxShadow = "0 0 10px rgba(0,0,0,0.5)";
+  handle.appendChild(circle);
+
+  // Update function
+  function update() {
+    const value = slider.value;
+    afterLayer.style.width = value + "%";
+    handle.style.left = value + "%";
   }
 
-  // Initialize sliders when page loads
-  window.addEventListener("load", function () {
-    // Only run the ones that exist on the current page
+  // Initial setup
+  container.innerHTML = "";
+  container.appendChild(beforeLabel);
+  container.appendChild(afterLayer);
+  afterLayer.appendChild(afterLabel);
+  container.appendChild(handle);
 
-    // For Hema-Quebec page
-    if (document.getElementById("compare") && document.getElementById("slider")) {
-      initBeforeAfter(
-        "compare",
-        "slider",
-        "assets/img/portfolio/hema-quebec-before.jpg",  
-        "assets/img/portfolio/hema-quebec-after.jpg"    
-      );
-    }
+  update(); // set initial position
 
-    // For AGREE Redesigned App page
-    if (document.getElementById("compare-app") && document.getElementById("slider-app")) {
-      initBeforeAfter(
-        "compare-app",
-        "slider-app",
-        "assets/img/agartee-redesigned-app/agartee-before-redesigned-app.png",  // BEFORE
-        "assets/img/agartee-redesigned-app/agartee-after-redesigned-app.png"    // AFTER (redesigned)
-      );
-    }
-  });
-})();
+  // Listen to slider
+  slider.addEventListener("input", update);
+}
+
+// Run on page load
+window.addEventListener("load", function () {
+  // Hema-Quebec slider
+  if (document.getElementById("compare") && document.getElementById("slider")) {
+    initBeforeAfter(
+      "compare",
+      "slider",
+      "assets/img/hema-quebec/hemaQuebec-before-accueil-desktop.png",
+      "assets/img/hema-quebec/hemaQuebec-after-accueil-desktop.png"
+    );
+  }
+
+  // Agartee Redesigned App slider
+  if (document.getElementById("compare-app") && document.getElementById("slider-app")) {
+    initBeforeAfter(
+      "compare-app",
+      "slider-app",
+      "assets/img/agartee-redesigned-app/agartee-before-redesigned-app.png",
+      "assets/img/agartee-redesigned-app/agartee-after-redesigned-app.png"
+    );
+  }
+});
