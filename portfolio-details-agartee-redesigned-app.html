@@ -86,9 +86,10 @@
         <!-- Before After Images Slider for AGREE Redesigned App -->
         <div class="before-after-container portfolio-info">
           <figure class="swiper-slide footer">
-            <div id="slider-app" style="height: 500px;"></div>
+            <div id="slider-app"></div>
           </figure>
-          <input type="range" min="0" max="100" value="50" id="slider-app" class="img-fluid" />
+          <input oninput="beforeAfterSliderApp()" onchange="beforeAfterSliderApp()" type="range" min="0" max="100"
+            value="50" id="slider" class="img-fluid" />
         </div>
         <!-- End of Before After Images Slider -->
 
@@ -1278,6 +1279,8 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/before_after.js"></script>
+  <script src="assets/js/app_slider.js"></script>
+
 
 </body>
 
