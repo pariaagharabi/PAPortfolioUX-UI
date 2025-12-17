@@ -1753,7 +1753,7 @@ tr:hover {
 	animation: first 2s 1 normal ease-in-out 0.1s; 
 	-webkit-animation: first 2s 1 normal ease-in-out 0.1s; 
 }
-input#slider {
+input#slipper {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	border: none; 
@@ -1768,10 +1768,10 @@ input#slider {
 	top: -100vw;
 	width: 100%;
 }
-input#slider::-moz-range-track { 
+input#slipper::-moz-range-track { 
 	background: transparent; 
 }
-input#slider::-ms-track {
+input#slipper::-ms-track {
 	border: none; 
 	background-color: transparent;
 	height: 100vw; 
@@ -1785,27 +1785,27 @@ input#slider::-ms-track {
 	cursor: col-resize;
 	color:transparent;
 }
-input#slider::-ms-fill-lower {
+input#slipper::-ms-fill-lower {
 	background-color:transparent;
 }
-input#slider::-webkit-slider-thumb {
+input#slipper::-webkit-slipper-thumb {
 	-webkit-appearance:none;
 	height: 100vw;
 	width: 0.5%;
 	opacity: 0;
 }
-input#slider::-moz-range-thumb {
+input#slipper::-moz-range-thumb {
 	-moz-appearance: none;
 	height: 100vw;
 	width: 0.5%;
 	opacity: 0;
 }   
-input#slider::-ms-thumb {
+input#slipper::-ms-thumb {
 	height: 100vw;
 	width: 0.5%; 
 	opacity:0;
 }
-input#slider::-ms-tooltip {
+input#slipper::-ms-tooltip {
 	display:none;
 }
 #equate::before {
