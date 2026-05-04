@@ -1,3 +1,3 @@
 function beforeAfterAISliderApp() {
-    document.getElementById('equate').style.width = document.getElementById('slipper').value + "%";
+    document.getElementById('AIequate').style.width = document.getElementById('aislipper').value + "%";
 }
