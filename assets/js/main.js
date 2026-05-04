@@ -271,6 +271,8 @@
 
   window.addEventListener("load", beforeAfter);
   window.addEventListener("load", beforeAfterSliderApp);
+  window.addEventListener("load", beforeAfterAISliderApp);
+
 
 })();
 
