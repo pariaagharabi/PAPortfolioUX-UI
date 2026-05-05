@@ -1844,7 +1844,7 @@ input#slipper::-ms-tooltip {
 	position: relative;
 	width: 100%; 
 }
-#AIequate {
+#aiequate {
   background-image: url('../../assets/img/agartee-ai/before-ai-slider.png');
 	background-size: cover;
 	bottom: 0;
@@ -1914,7 +1914,7 @@ input#slipper::-ms-thumb {
 input#slipper::-ms-tooltip {
 	display:none;
 }
-#AIequate::before {
+#aiequate::before {
   background: url('../../assets/img/left-and-right-arrows.png') no-repeat scroll 0 center transparent;
   background-size:contain;
 	content: " ";
