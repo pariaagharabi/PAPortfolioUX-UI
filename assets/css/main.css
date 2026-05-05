@@ -950,6 +950,7 @@ section,
 	-webkit-animation: first 2s 1 normal ease-in-out 0.1s; 
 }
 input#slider {
+  appearance: none;
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	border: none; 
@@ -1722,7 +1723,7 @@ tr:hover {
 	width: 98vw;
 }
 .before-after-agartee-container figure { 
-  background-image: url('../../assets/img/agartee-redesigned-app/agartee-before-redesigned-app.png');
+  background-image: url('../../assets/img/agartee-redesigned-app/agartee-after-redesigned-app.png');
 	background-size: cover;
 	font-size: 0;
 	height: 100%;
@@ -1746,6 +1747,7 @@ tr:hover {
 	-webkit-animation: first 2s 1 normal ease-in-out 0.1s; 
 }
 input#slipper {
+  appearance: none;
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	border: none; 
@@ -1860,6 +1862,7 @@ input#slipper::-ms-tooltip {
 	-webkit-animation: first 2s 1 normal ease-in-out 0.1s; 
 }
 input#aislipper {
+  appearance: none;
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	border: none; 
