@@ -1859,7 +1859,7 @@ input#slipper::-ms-tooltip {
 	animation: first 2s 1 normal ease-in-out 0.1s; 
 	-webkit-animation: first 2s 1 normal ease-in-out 0.1s; 
 }
-input#slipper {
+input#aislipper {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	border: none; 
@@ -1874,10 +1874,10 @@ input#slipper {
 	top: -100vw;
 	width: 100%;
 }
-input#slipper::-moz-range-track { 
+input#aislipper::-moz-range-track { 
 	background: transparent; 
 }
-input#slipper::-ms-track {
+input#aislipper::-ms-track {
 	border: none; 
 	background-color: transparent;
 	height: 100vw; 
@@ -1891,27 +1891,27 @@ input#slipper::-ms-track {
 	cursor: col-resize;
 	color:transparent;
 }
-input#slipper::-ms-fill-lower {
+input#aislipper::-ms-fill-lower {
 	background-color:transparent;
 }
-input#slipper::-webkit-slipper-thumb {
+input#aislipper::-webkit-aislipper-thumb {
 	-webkit-appearance:none;
 	height: 100vw;
 	width: 0.5%;
 	opacity: 0;
 }
-input#slipper::-moz-range-thumb {
+input#aislipper::-moz-range-thumb {
 	-moz-appearance: none;
 	height: 100vw;
 	width: 0.5%;
 	opacity: 0;
 }   
-input#slipper::-ms-thumb {
+input#aislipper::-ms-thumb {
 	height: 100vw;
 	width: 0.5%; 
 	opacity:0;
 }
-input#slipper::-ms-tooltip {
+input#aislipper::-ms-tooltip {
 	display:none;
 }
 #aiequate::before {
