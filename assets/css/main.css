@@ -1723,7 +1723,7 @@ tr:hover {
 	width: 98vw;
 }
 .before-after-agartee-container figure { 
-  background-image: url('../../assets/img/agartee-redesigned-app/agartee-after-redesigned-app.png');
+  background-image: url('../../assets/img/agartee-redesigned-app/after-redesign.png');
 	background-size: cover;
 	font-size: 0;
 	height: 100%;
@@ -1732,7 +1732,7 @@ tr:hover {
 	width: 100%; 
 }
 #equate {
-  background-image: url('../../assets/img/agartee-redesigned-app/agartee-before-redesigned-app.png');
+  background-image: url('../../assets/img/agartee-redesigned-app/before-redesign.png');
 	background-size: cover;
 	bottom: 0;
 	border-right: 5px solid var(--accent-color);
