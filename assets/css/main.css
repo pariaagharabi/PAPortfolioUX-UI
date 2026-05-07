@@ -1714,7 +1714,7 @@ tr:hover {
 /*--------------------------------------------------------------
 # Before After Slider Section For Redesigned Agartee App
 --------------------------------------------------------------*/
-.before-after-agartee-container { 
+.before-after-redesigned-container { 
 	height: 73.5vw;
 	margin: 1vw auto;
 	max-height: 750px;
@@ -1722,7 +1722,7 @@ tr:hover {
 	overflow: hidden;
 	width: 98vw;
 }
-.before-after-agartee-container figure { 
+.before-after-redesigned-container figure { 
   background-image: url('../../assets/img/agartee-redesigned-app/after-redesign.png');
 	background-size: cover;
 	font-size: 0;
@@ -1829,7 +1829,7 @@ input#slipper::-ms-tooltip {
 /*--------------------------------------------------------------
 # Before After Slider Section For AI-AssistedRedesigned Agartee App
 --------------------------------------------------------------*/
-.before-after-agartee-container { 
+.before-after-ai-container { 
 	height: 73.5vw;
 	margin: 1vw auto;
 	max-height: 750px;
@@ -1837,7 +1837,7 @@ input#slipper::-ms-tooltip {
 	overflow: hidden;
 	width: 98vw;
 }
-.before-after-agartee-container figure { 
+.before-after-ai-container figure { 
   background-image: url('../../assets/img/agartee-ai/after-ai-slider.png');
 	background-size: cover;
 	font-size: 0;
